@@ -6,7 +6,7 @@ class TestWithdraw:
     def test_make_a_withdraw(self, open_home_page):
         # Abre a página de login do cliente
         open_home_page.click_btn_customer_login()
-        print("Clicou no botão de login do cliente")
+        print("Clicou no botão de Login do cliente")
 
         # Página de login do cliente
         login_customer_page = CustomerLoginPage(driver=open_home_page.driver)
@@ -14,9 +14,9 @@ class TestWithdraw:
         # Realiza o login do cliente
         login_customer_page.select_user_withdraw(login_customer_page.user_name_withdraw)
         login_customer_page.click_on_login()
-        print("Realizou o login do cliente")
+        print("Selecionou cliente e clicou no botão login")
 
-        # Instancia a página de conta e seleciona o tipo de conta
+        # Instancia a página de conta
         account_page = AccountPage(driver=login_customer_page.driver)
         print("Página de conta instanciada")
 
@@ -48,4 +48,4 @@ class TestWithdraw:
 
         # Realiza logout
         account_page.make_a_logout()
-        print("Realizou o logout")
+        print("Realiza logout")

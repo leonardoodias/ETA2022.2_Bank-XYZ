@@ -12,6 +12,7 @@ class AccountPage(PageObject):
     id_account_select = 'accountSelect'
     css_btn_deposit = '[ng-click="deposit()"]'
     css_btn_withdraw = '[ng-click="withdrawl()"]'
+    css_btn_transaction = '[ng-click="transactions()"]'
     css_amount = '[placeholder="amount"]'
     class_btn_deposit = 'btn-default'
     class_btn_withdraw = 'btn-default'
@@ -26,7 +27,7 @@ class AccountPage(PageObject):
 
     def __init__(self, driver):
         super(AccountPage, self).__init__(driver=driver)
-        self.wait = WebDriverWait(driver, 5)
+        self.wait = WebDriverWait(driver, 6)
         self.driver.get(self.url_account_page)
 
     def click_type_account(self):
@@ -118,6 +119,13 @@ class AccountPage(PageObject):
         # Valida o saldo após o saque
         new_balance = self.get_balance()
         return new_balance == initial_balance - float(self.value_withdraw)
+
+    def click_transaction_button(self):
+        # Clica no botão de histórico de transações
+        transaction_button = self.wait.until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, self.css_btn_transaction))
+        )
+        transaction_button.click()
 
     def make_a_logout(self):
         logout_button = self.driver.find_element(By.CSS_SELECTOR, self.css_logout)

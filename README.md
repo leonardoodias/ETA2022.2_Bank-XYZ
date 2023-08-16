@@ -10,8 +10,13 @@ Projeto de avaliação de automação de testes web, da disciplina de testes de 
 - [ ] Deletar Customer 
 - [ ] Filtrar Customer por Nome
 - [ ] Ordenar Customer por Nome
+<<<<<<< HEAD
 - [X] Realizar depósito
 - [X] Realizar saque
+=======
+- [ ] Realizar depósito
+- [ ] Realizar saque
+>>>>>>> e81da6f11bb593446c2d767c6091054f23d183d8
 - [ ] Validar historico de transação de depósito e débito
 - [ ] Resetar historico de transação
 
