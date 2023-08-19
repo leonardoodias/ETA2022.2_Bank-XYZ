@@ -26,7 +26,7 @@ class PageObject:
         self.driver.quit()
 
     def is_url(self, url):
-        return self.driver.current_url == url
+        return WebDriverWait(self.driver, 10).until(EC.url_matches(url))
 
     def has_title(self, title_text):
         wait = WebDriverWait(self.driver, 10)
