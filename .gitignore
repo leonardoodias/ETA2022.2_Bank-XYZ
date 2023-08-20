@@ -1,0 +1,25 @@
+
+*.iml
+
+## Directory-based project format:
+.idea/
+venv/
+
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+.pytest_cache
+.DS_Store

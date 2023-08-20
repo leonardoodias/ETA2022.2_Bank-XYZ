@@ -8,6 +8,7 @@ class TestFilterCustomer:
 
         # Listagem do cliente
         manager_page.click_customers()
+
         # Valida que está na página de listar clientes
         customers_page = CustomersPage(driver=manager_page.driver)
 

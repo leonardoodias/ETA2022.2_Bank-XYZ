@@ -1,5 +1,6 @@
 from Pages.CustomersPage import CustomersPage
 
+
 class TestDeleteCustomer:
 
     def test_delete_customer(self, add_customer):

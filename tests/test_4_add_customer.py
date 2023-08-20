@@ -4,8 +4,8 @@ from Pages.ManagerPage import ManagerPage
 
 class TestAddCustomer:
 
-    def test_add_customer(self, setup):
-        menu_page = setup
+    def test_add_customer(self, open_home_page):
+        menu_page = open_home_page
         menu_page.open_bank_manager_login()
         manager_page = ManagerPage(driver=menu_page.driver)
 
@@ -24,6 +24,5 @@ class TestAddCustomer:
         add_customer.fill_post_code('13174-100')
         add_customer.click_add_customer()
 
-
         # Valida adição de cliente com sucesso
-        assert add_customer.check_message_success().__contains__('Customer added successfully with customer id'),'Cliente não adicionado!'
+        assert add_customer.check_popup_success(), 'Cliente não adicionado!'
