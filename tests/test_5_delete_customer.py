@@ -11,11 +11,11 @@ class TestDeleteCustomer:
 
         # valida que está na página de listar clientes
         customers_page = CustomersPage(driver=manager_page.driver)
-        assert customers_page.is_url_customers_page(), 'Página de listar clientes não encontrada!'
+        assert customers_page.is_url_customers_page(), 'List of clients page not found!'
 
         # Busca Cliente
         customers_page.find_customer('Maria')
         customers_page.delete_customer()
 
         # Valida que cliente foi deletado
-        assert customers_page.check_table() == 0, 'Cliente não deletado'
+        assert customers_page.check_table() == 0, 'Customer not deleted'
