@@ -10,14 +10,14 @@ class TestAddCustomer:
         manager_page = ManagerPage(driver=menu_page.driver)
 
         # valida que está na pagína de gerenciamento de cliente
-        assert manager_page.is_url_manager_page(), 'Página de gerenciamento não encontrada!'
+        assert manager_page.is_url_manager_page(), 'Management page not found!'
 
         # Add cliente
         manager_page.click_add_customer()
         add_customer = AddCustomerPage(driver=manager_page.driver)
 
         # valida que está na página de add cliente
-        assert add_customer.is_url_add_customer(), 'Página de adicionar cliente não encontrada!'
+        assert add_customer.is_url_add_customer(), 'Add customer page not found!'
 
         add_customer.fill_first_name('Maria')
         add_customer.fill_last_name('Silva')
@@ -25,4 +25,4 @@ class TestAddCustomer:
         add_customer.click_add_customer()
 
         # Valida adição de cliente com sucesso
-        assert add_customer.check_popup_success(), 'Cliente não adicionado!'
+        assert add_customer.check_popup_success(), 'Customer not added!'
