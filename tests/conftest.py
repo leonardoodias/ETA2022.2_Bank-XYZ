@@ -43,7 +43,7 @@ def add_customer(open_home_page):
     open_home_page.open_bank_manager_login()
     manager_page = ManagerPage(driver=open_home_page.driver)
     # valida que está na pagína de gerenciamento de cliente
-    assert manager_page.is_url_manager_page(), 'Página de gerenciamento não encontrada!'
+    assert manager_page.is_url_manager_page(), 'Management page not found!'
     # Add cliente
     manager_page.click_add_customer()
     add_customer = AddCustomerPage(driver=manager_page.driver)
