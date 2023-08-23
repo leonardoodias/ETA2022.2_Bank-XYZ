@@ -22,7 +22,7 @@ class TestTransaction:
         transaction_page = TransactionPage(account_page.driver)
 
         # Verifica se a URL é a da página de histórico de transações
-        assert transaction_page.is_url_list_tx(), 'URL incorreta'
+        assert transaction_page.is_url_list_tx(), 'incorrect URL'
 
         # Realiza a pesquisa de transação na página de histórico de transações
         expected_transactions = [
