@@ -12,10 +12,10 @@ class TestFilterCustomer:
         # Valida que está na página de listar clientes
         customers_page = CustomersPage(driver=manager_page.driver)
 
-        assert customers_page.is_url_customers_page(), 'Página de listar clientes não encontrada!'
+        assert customers_page.is_url_customers_page(), 'Clients list page not found!'
 
         # Busca Cliente
         customers_page.find_customer('Maria')
 
         # Valida busca do cliente
-        assert customers_page.check_table() == 1, 'Cliente não encontrado'
+        assert customers_page.check_table() == 1, 'Customer not found'
