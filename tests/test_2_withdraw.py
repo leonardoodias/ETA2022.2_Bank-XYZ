@@ -27,14 +27,14 @@ class TestWithdraw:
         account_page.wait_for_balance_update(initial_balance - float(account_page._value_withdraw))
 
         # Verifica a mensagem de sucesso
-        assert account_page.message_success_withdraw(), 'Mensagem não encontrada'
+        assert account_page.message_success_withdraw(), 'Message not found'
 
         # Obtém o novo saldo após o saque
         new_balance_after_withdraw = account_page.get_balance()
 
         # Verifica se o valor do novo saldo é igual ao saldo anterior menos o valor do saque
         expected_balance = initial_balance - float(account_page._value_withdraw)
-        assert new_balance_after_withdraw == expected_balance, 'Saldo após o saque incorreto'
+        assert new_balance_after_withdraw == expected_balance, 'Incorrect balance after withdraw'
 
         # Realiza logout
         account_page.make_a_logout()
