@@ -29,12 +29,11 @@ class TestDeposit:
         account_page.wait_for_balance_update(initial_balance + float(account_page._value_deposit))
 
         # Verifica a mensagem de sucesso
-        assert account_page.message_success_deposit(), 'Mensagem não encontrada'
+        assert account_page.message_success_deposit(), 'Message not found'
 
         # Verifica se o valor foi adicionado ao Balance após o depósito
         new_balance = account_page.get_balance()
-        assert new_balance == initial_balance + float(account_page._value_deposit), 'Saldo após o depósito incorreto'
+        assert new_balance == initial_balance + float(account_page._value_deposit), 'Incorrect balance after deposit'
 
         # Realiza logout
         account_page.make_a_logout()
-        print("Realiza o logout")
