@@ -5,17 +5,17 @@ Projeto de avaliação de automação de testes web, da disciplina de testes de 
 - Ter a versão 3.8 do Python instalda no computador. Para mais informações: https://python.org.br/instalacao-windows/
 
 ### Cenários de Testes Automatizados 
-- [ ] Criar Customer
-- [ ] Abrir Conta 
-- [ ] Deletar Customer 
-- [ ] Filtrar Customer por Nome
-- [ ] Ordenar Customer por Nome
+- [X] Criar Customer
+- [X] Abrir Conta 
+- [X] Deletar Customer 
+- [X] Filtrar Customer por Nome
+- [X] Ordenar Customer por Nome
 - [X] Realizar depósito
 - [X] Realizar saque
-- [ ] Realizar depósito
-- [ ] Realizar saque
+- [X] Realizar depósito
+- [X] Realizar saque
 - [X] Validar historico de transação de depósito e débito
-- [ ] Resetar historico de transação
+- [X] Resetar historico de transação
 
 ### Tecnologias
 - Linguagem Python 
