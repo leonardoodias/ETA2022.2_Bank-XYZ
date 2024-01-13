@@ -1,6 +1,7 @@
 # Automação de Testes Web em Python e Selenium
 - Projeto de avaliação de automação de testes web da disciplina de testes de sistemas. 
-- Especialização de Testes Ágeis - Cesar School 
+- Especialização de Testes Ágeis - Cesar School
+- Professor: Fernando Benbassat
 
 ### Alunos
 - Beatriz Navarro
